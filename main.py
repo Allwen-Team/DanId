@@ -23,7 +23,7 @@ def welcome(m):
     markup.add(b)
     nn = types.InlineKeyboardButton("Switch To Inline Mode", switch_inline_query='')
     markup.add(nn)
-    ret_msg = bot.send_message(cid, "Hi Dear!\nMy Commands: \nYou Can Get Your Id With : \n /idme (just pv) \nSend Your Feedback : /feedback [msg]\n\n\n list inline mod : \ntype @DanIdBot", disable_notification=True, reply_markup=markup)
+    ret_msg = bot.send_message(cid, "Hi Dear!\nMy Commands: \nYou Can Get Your Id With : \n /idme (just pv) \nSend Your Feedback : /feedback [msg]\n\nGet Inline List With \nType @DanIdBot", disable_notification=True, reply_markup=markup)
     assert ret_msg.message_id
 
 @bot.message_handler(commands=['id', 'ids', 'info', 'me'])
@@ -65,9 +65,9 @@ def p(m):
     j = types.InlineKeyboardButton('Allwen', url='https://telegram.me/allwen')
     o = types.InlineKeyboardButton('Randall', url='https://telegram.me/Xx_Randall_Xx')
     p = types.InlineKeyboardButton('NeonGame', url='https://telegram.me/pokr_face')
-    y = types.InlineKeyboardButton('\xF0\x9F\x92\x8E End \xF0\x9F\x92\x8E', callback_data='Team')
-    ch = types.InlineKeyboardButton('Channel', url='https://telegram.me/idbot_channel')
-    git = types.InlineKeyboardButton('Github', url='https://github.com/taylor-team')
+    y = types.InlineKeyboardButton('\xF0\x9F\x92\x8E WoW \xF0\x9F\x92\x8E', callback_data='Team')
+    ch = types.InlineKeyboardButton('Channel', url='https://telegram.me/DaniNews')
+    git = types.InlineKeyboardButton('Github', url='https://github.com/allwenwaker')
     markup.add(v)
     markup.add(a, j)
     markup.add(b, c)
@@ -77,14 +77,14 @@ def p(m):
     markup.add(ch, git)
     bot.send_chat_action(uid, 'typing')
     bot.send_message(uid, "daniel Official id Bot! \n\n Developer: \n [Daniel](https://telegram.me/allwen", parse_mode="Markdown")
-    bot.send_photo(uid, open('Allwen.jpg'), caption="@AllwenOfficiall", reply_markup=markup)
+    bot.send_photo(uid, open('Allwen.jpg'), caption="@DaniNews", reply_markup=markup)
 
 @bot.message_handler(commands=['danid'])
 def handler(m):
     cid = m.chat.id
-    bot.send_message(cid, "Im Danid bot \n My developer : [Daniel](https://telegram.me/Allwen) \n development channel : [Allwen official](https://telegram.me/Allwenofficial)", parse_mode="Markdown")
+    bot.send_message(cid, "Im Danid bot\nMy developer : [Daniel](https://telegram.me/Allwen) \n My Channel : [DaniNews](https://telegram.me/DaniNews)", parse_mode="Markdown")
     bot.send_chat_action(cid, "upload_photo")
-    bot.send_photo(cid, open('slackbot-story1-582x436.jpg'), caption="@DanIdBot  \xF0\x9F\x98\x9C")
+    bot.send_photo(cid, open('test.jpg'), caption="@DanIdBot  \xF0\x9F\x98\x9C")
 
 @bot.message_handler(commands=['idme'])
 def test_handler(m):
@@ -135,7 +135,7 @@ def query_text(query):
     #pic = types.InlineQueryResultPhoto('2',
                                        #'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg',
                                        #'http://vip.opload.ir/vipdl/95/3/negative23/photo-2016-06-09-01-09-41.jpg',
-                                       #input_message_content=types.InputTextMessageContent('@Taylor_Team')
+                                       #input_message_content=types.InputTextMessageContent('@DaniNews')
     #gif = types.InlineQueryResultGif('2',
                                     # 'http://andrewtrimmer.com/wp-content/uploads/2014/09/Coming-Soon_Light-Bulbs_Cropped-Animation-Set_03c.gif',
                                      #'http://andrewtrimmer.com/wp-content/uploads/2014/09/Coming-Soon_Light-Bulbs_Cropped-Animation-Set_03c.gif',
