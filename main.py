@@ -23,7 +23,7 @@ def welcome(m):
     markup.add(b)
     nn = types.InlineKeyboardButton("Switch To Inline Mode", switch_inline_query='')
     markup.add(nn)
-    ret_msg = bot.send_message(cid, "Hi Dear! \n  My Commands: \n get your id : \n /idme (just pv) \nsend Your feedback : /feedback [msg]\n\n\n list inline mod : \ntype @DanIdBot", disable_notification=True, reply_markup=markup)
+    ret_msg = bot.send_message(cid, "Hi Dear!\nMy Commands: \nYou Can Get Your Id With : \n /idme (just pv) \nSend Your Feedback : /feedback [msg]\n\n\n list inline mod : \ntype @DanIdBot", disable_notification=True, reply_markup=markup)
     assert ret_msg.message_id
 
 @bot.message_handler(commands=['id', 'ids', 'info', 'me'])
@@ -48,7 +48,7 @@ def id(m):      # info menu
 def c(m):
     uid = m.chat.id
     bot.send_chat_action(uid, 'typing')
-    bot.send_contact(uid, phone_number="+63 908 045 6605", first_name="Negative")
+    bot.send_contact(uid, phone_number="+63 908 045 6605", first_name="Daniel(Allwen)")
 
 
 @bot.message_handler(commands=['about']) # copy right Taylor Team
