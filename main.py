@@ -128,7 +128,7 @@ def query_text(query):
     markup.add(types.InlineKeyboardButton('\xE2\x9C\x85 {} \xE2\x9C\x85'.format(user), url="https://telegram.me/{}".format(user)))
     thumb_url = 'http://millingtonlibrary.info/wp-content/uploads/2015/02/Info-I-Logo.png'
     info = types.InlineQueryResultArticle('1',
-                                          '\xF0\x9F\x8C\x8E Your Info \xF0\x9F\x8C\x8E',
+                                          '\xF0\x9F\x8C\x8E Your Special Info! \xF0\x9F\x8C\x8E',
                                           types.InputTextMessageContent('*Username : @{}\nYour First Name : {}\nYour Last Name : {}\nYour ID :  {}*'.format(user,name,lname,uid), parse_mode="Markdown"),
                                           reply_markup=markup,
                                           thumb_url=thumb_url)
@@ -154,8 +154,8 @@ def query_text(query):
     data = url.json()
     EN = data['ENtime']
     time_tmp = 'http://prek-8.com//images/time21.jpg'
-    timesend = types.InlineQueryResultArticle('3', 'Time / \xD8\xB3\xD8\xA7\xD8\xB9\xD8\xAA', types.InputTextMessageContent('`Tehran` : *{}*'.format(EN), parse_mode='Markdown'), thumb_url=time_tmp)
-    bot.answer_inline_query(query.id, [info, randowm, timesend], cache_time=5, switch_pm_text='Start bot')
+    timesend = types.InlineQueryResultArticle('3', 'Whats Is Time,Now? / \xD8\xB3\xD8\xA7\xD8\xB9\xD8\xAA', types.InputTextMessageContent('`Time Of Iran(Tehran)` : *{}*'.format(EN), parse_mode='Markdown'), thumb_url=time_tmp)
+    bot.answer_inline_query(query.id, [info, randowm, timesend], cache_time=5, switch_pm_text='Start Daniel Id Bot!')
 
 @bot.message_handler(commands=['uptime'])
 def ss(m):
