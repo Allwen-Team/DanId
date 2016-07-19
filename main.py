@@ -21,7 +21,7 @@ def welcome(m):
     markup.add(a, c)
     b = types.InlineKeyboardButton("Developer \xE2\x9C\x8C", url="https://telegram.me/MrInferno")
     markup.add(b)
-    nn = types.InlineKeyboardButton("Switch To Inline Mode", switch_inline_query='')
+    nn = types.InlineKeyboardButton("| Inline Mode |", switch_inline_query='')
     markup.add(nn)
     ret_msg = bot.send_message(cid, "Hi Dear!\nMy Commands: \nYou Can Get Your Id With : \n /idme (just pv) \nSend Your Feedback : /feedback [msg]\n\nGet Inline List With \nType @DanIdBot", disable_notification=True, reply_markup=markup)
     assert ret_msg.message_id
@@ -66,7 +66,7 @@ def p(m):
     o = types.InlineKeyboardButton('Randall', url='https://telegram.me/Xx_Randall_Xx')
     p = types.InlineKeyboardButton('NeonGame', url='https://telegram.me/pokr_face')
     y = types.InlineKeyboardButton('\xF0\x9F\x92\x8E WoW \xF0\x9F\x92\x8E', callback_data='Team')
-    ch = types.InlineKeyboardButton('Channel', url='https://telegram.me/DaniNews')
+    ch = types.InlineKeyboardButton('Channel', url='https://telegram.me/AriNews')
     git = types.InlineKeyboardButton('Github', url='https://github.com/MrPython')
     markup.add(v)
     markup.add(a, j)
@@ -147,7 +147,7 @@ def query_text(query):
     tumsss = 'http://images.clipartpanda.com/contact-clipart-contact-phone-md.png'
     random_text = random.randint(1, 100)
     tmpp = 'http://sugartin.info/wp-content/uploads/2013/11/logo.png'
-    randowm = types.InlineQueryResultArticle('2', '\xD8\xB9\xD8\xAF\xD8\xAF\x20\xD8\xB4\xD8\xA7\xD9\x86\xD8\xB3\xDB\x8C\x20\xF0\x9F\x99\x88',
+    randowm = types.InlineQueryResultArticle('2', 'Random Number',
                                              types.InputTextMessageContent('\xD8\xB9\xD8\xAF\xD8\xAF\x20\xD8\xB4\xD8\xA7\xD9\x86\xD8\xB3\xDB\x8C : {}'.format(random_text)), thumb_url=tmpp)
 
     url = req.get('http://api.gpmod.ir/time/')
