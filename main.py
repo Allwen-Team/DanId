@@ -16,10 +16,10 @@ bot = telebot.TeleBot(config.token)
 def welcome(m):
     cid = m.chat.id
     markup = types.InlineKeyboardMarkup()
-    a = types.InlineKeyboardButton("Allwen Team \xE2\x9C\x8C", url="https://telegram.me/AllwenOfficiall")
-    c = types.InlineKeyboardButton("Add DanId To Group \xE2\x9C\x8C", url="https://telegram.me/DanidBot?startgroup=test")
+    a = types.InlineKeyboardButton("Python Ch \xE2\x9C\x8C", url="https://telegram.me/PythonShop")
+    c = types.InlineKeyboardButton("Add IdierRobot To Group \xE2\x9C\x8C", url="https://telegram.me/DanidBot?startgroup=test")
     markup.add(a, c)
-    b = types.InlineKeyboardButton("Developer \xE2\x9C\x8C", url="https://telegram.me/Allwen")
+    b = types.InlineKeyboardButton("Developer \xE2\x9C\x8C", url="https://telegram.me/MrInferno")
     markup.add(b)
     nn = types.InlineKeyboardButton("Switch To Inline Mode", switch_inline_query='')
     markup.add(nn)
@@ -39,7 +39,7 @@ def id(m):      # info menu
     p = m.pinned_message
     fromm = m.forward_from
     markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton("\xF0\x9F\x98\x8A Allwen Team \xF0\x9F\x98\x8A", url="https://telegram.me/AllwenOfficiall"))
+    markup.add(types.InlineKeyboardButton("\xF0\x9F\x98\x8A Python Shop \xF0\x9F\x98\x8A", url="https://telegram.me/pythonShop"))
 #info text
     bot.send_chat_action(cid, "typing")
     bot.reply_to(m, "*Id from* : ```{}``` \n\n *Gp Name* : ```{}``` \n\n\n *Your Username* : ```{}``` \n\n *Your First Name* : ```{}```\n\n *Your Last Name* : ```{}```\n\n *Type From* : ```{}``` \n\n *Msg data* : ```{}```\n\n *Your Msg* : ```{}```\n\n* pind msg * : ```{}```\n\n *from* : ```{}```".format(cid,title,usr,f,l,t,d,text,p,fromm), parse_mode="Markdown", reply_markup=markup)
@@ -48,7 +48,7 @@ def id(m):      # info menu
 def c(m):
     uid = m.chat.id
     bot.send_chat_action(uid, 'typing')
-    bot.send_contact(uid, phone_number="+63 908 045 6605", first_name="Daniel(Allwen)")
+    bot.send_contact(uid, phone_number="+1 281 853 9367", first_name="The Infernal")
 
 
 @bot.message_handler(commands=['about']) # copy right Taylor Team
@@ -67,7 +67,7 @@ def p(m):
     p = types.InlineKeyboardButton('NeonGame', url='https://telegram.me/pokr_face')
     y = types.InlineKeyboardButton('\xF0\x9F\x92\x8E WoW \xF0\x9F\x92\x8E', callback_data='Team')
     ch = types.InlineKeyboardButton('Channel', url='https://telegram.me/DaniNews')
-    git = types.InlineKeyboardButton('Github', url='https://github.com/allwenwaker')
+    git = types.InlineKeyboardButton('Github', url='https://github.com/MrPython')
     markup.add(v)
     markup.add(a, j)
     markup.add(b, c)
@@ -76,15 +76,15 @@ def p(m):
     markup.add(y)
     markup.add(ch, git)
     bot.send_chat_action(uid, 'typing')
-    bot.send_message(uid, "daniel Official id Bot! \n\n Developer: \n [Daniel](https://telegram.me/allwen", parse_mode="Markdown")
+    bot.send_message(uid, "Arian Official id Bot! \n\n Developer: \n [MrPython](https://telegram.me/MrInfernal", parse_mode="Markdown")
     bot.send_photo(uid, open('Allwen.jpg'), caption="@DaniNews", reply_markup=markup)
 
-@bot.message_handler(commands=['danid'])
+@bot.message_handler(commands=['idierrobot'])
 def handler(m):
     cid = m.chat.id
-    bot.send_message(cid, "Im Danid bot\nMy developer : [Daniel](https://telegram.me/Allwen) \n My Channel : [DaniNews](https://telegram.me/DaniNews)", parse_mode="Markdown")
+    bot.send_message(cid, "Im Idieer bot\nMy developer : [Infernal](https://telegram.me/MrInfernal) \n My Channel : [AriNews](https://telegram.me/AriNews)", parse_mode="Markdown")
     bot.send_chat_action(cid, "upload_photo")
-    bot.send_photo(cid, open('test.jpg'), caption="@DanIdBot  \xF0\x9F\x98\x9C")
+    bot.send_photo(cid, open('test.jpg'), caption="IdierRobot  \xF0\x9F\x98\x9C")
 
 @bot.message_handler(commands=['idme'])
 def test_handler(m):
@@ -154,7 +154,7 @@ def query_text(query):
     data = url.json()
     EN = data['ENtime']
     time_tmp = 'http://prek-8.com//images/time21.jpg'
-    timesend = types.InlineQueryResultArticle('3', 'Whats Is Time,Now? / \xD8\xB3\xD8\xA7\xD8\xB9\xD8\xAA', types.InputTextMessageContent('`Time Of Iran(Tehran)` : *{}*'.format(EN), parse_mode='Markdown'), thumb_url=time_tmp)
+    timesend = types.InlineQueryResultArticle('3', 'Whats Is Time Now? / \xD8\xB3\xD8\xA7\xD8\xB9\xD8\xAA', types.InputTextMessageContent('`Time Of Iran(Tehran)` : *{}*'.format(EN), parse_mode='Markdown'), thumb_url=time_tmp)
     bot.answer_inline_query(query.id, [info, randowm, timesend], cache_time=5, switch_pm_text='Start Daniel Id Bot!')
 
 @bot.message_handler(commands=['uptime'])
