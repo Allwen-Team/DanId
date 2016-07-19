@@ -148,7 +148,7 @@ def query_text(query):
     random_text = random.randint(1, 100)
     tmpp = 'http://sugartin.info/wp-content/uploads/2013/11/logo.png'
     randowm = types.InlineQueryResultArticle('2', 'Random Number',
-                                             types.InputTextMessageContent('\xD8\xB9\xD8\xAF\xD8\xAF\x20\xD8\xB4\xD8\xA7\xD9\x86\xD8\xB3\xDB\x8C : {}'.format(random_text)), thumb_url=tmpp)
+                                             types.InputTextMessageContent('`Random Number` : {}'.format(random_text)), thumb_url=tmpp)
 
     url = req.get('http://api.gpmod.ir/time/')
     data = url.json()
