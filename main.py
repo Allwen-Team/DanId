@@ -17,13 +17,13 @@ def welcome(m):
     cid = m.chat.id
     markup = types.InlineKeyboardMarkup()
     a = types.InlineKeyboardButton("Python Ch \xE2\x9C\x8C", url="https://telegram.me/PythonShop")
-    c = types.InlineKeyboardButton("Add IdierRobot To Group \xE2\x9C\x8C", url="https://telegram.me/DanidBot?startgroup=test")
+    c = types.InlineKeyboardButton("Add IdierRobot To Group \xE2\x9C\x8C", url="https://telegram.me/IdierRobot?startgroup=test")
     markup.add(a, c)
     b = types.InlineKeyboardButton("Developer \xE2\x9C\x8C", url="https://telegram.me/MrInferno")
     markup.add(b)
     nn = types.InlineKeyboardButton("| Inline Mode |", switch_inline_query='')
     markup.add(nn)
-    ret_msg = bot.send_message(cid, "Hi Dear!\nMy Commands: \nYou Can Get Your Id With : \n /idme (just pv) \nSend Your Feedback : /feedback [msg]\n\nGet Inline List With \nType @DanIdBot", disable_notification=True, reply_markup=markup)
+    ret_msg = bot.send_message(cid, "Hi Dear!\nMy Commands: \nYou Can Get Your Id With : \n /idme (just pv) \nSend Your Feedback : /feedback [msg]\n\nGet Inline List With \nType @IdierRobot", disable_notification=True, reply_markup=markup)
     assert ret_msg.message_id
 
 @bot.message_handler(commands=['id', 'ids', 'info', 'me'])
