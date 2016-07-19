@@ -1,4 +1,4 @@
 
-token = '264443334:AAGroaMsjJRXWkcQvku1j_tkdG_hf-c3mrg'
-is_sudo = '227014422' 
+token = '265341438:AAGrfHNU-GskdaOfGVwBA4TXpiAoalD9Sdo'
+is_sudo = '169371828' 
 
